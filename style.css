@@ -1,0 +1,104 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar Container */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar List */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Links */
+.navbar ul li {
+    padding: 8px 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        padding: 15px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Centering Content Sections */
+section {
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
