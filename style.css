@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif; /* Set uniform font for all text */
+    font-style: normal;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically centers the navbar items */
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Horizontally centers the navbar items */
+    align-items: center; /* Ensures items are vertically aligned */
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 8px 20px; /* Equal padding for top, bottom, left, and right */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px; /* Increased font size */
+    letter-spacing: 1px;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f4;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        padding: 15px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.hero {
+    position: relative;
+    height: 100vh; 
+    background-image: url('images/yyyyy.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6); /* Black background */
+    padding: 20px; /* Adds spacing around the text */
+    /* Removed the border-radius to keep sharp rectangle corners */
+}
+
+.hero-text h1 {
+    margin: 0;
+}
