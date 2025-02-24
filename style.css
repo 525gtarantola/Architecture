@@ -119,3 +119,15 @@ nav {
 .hero-text h1 {
     margin: 0;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px; /* Adjust the padding to your liking */
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
