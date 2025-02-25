@@ -1,9 +1,8 @@
-/* General Styling */
 body {
     font-family: "Marcellus", serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #e0e0e0; /* Darker background for the body */
 }
 
 h1, h2, h3 {
@@ -36,7 +35,7 @@ a {
 
 /* Program Overview Section */
 #program-overview {
-    background-color: #fff;
+    background-color: #fff; /* Keeping this white */
 }
 
 /* Faculty Section */
@@ -58,7 +57,7 @@ a {
 
 /* Contact Section */
 #contact {
-    background-color: #fff;
+    background-color: #f8f9fa; /* Slightly darker background than the sections */
     padding: 40px 0;
     text-align: center;
 }
@@ -89,4 +88,38 @@ a {
 .btn:focus {
     outline: none;
     box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.4);
+}
+
+/* Section with borders */
+.bordered-section {
+    border: 2px solid black; /* Thin black border around each section */
+    padding: 20px; /* Padding inside the border */
+    margin: 20px auto; /* Space between sections and centers the section */
+    max-width: 1450px; /* Controls the width of the border */
+    background-color: #fff; /* Ensures sections have a white background */
+}
+
+.container {
+    padding: 0 15px; /* Keeps some padding inside the container */
+    width: 100%; /* Ensure container takes full width but respects max-width */
+}
+
+#program-overview, #faculty, #gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contact {
+    width: 100%; /* Ensure the contact section spans full width */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Background color for the contact section */
+    text-align: center; /* Center text in contact section */
+    margin: 0; /* Remove margin for full-width contact section */
+}
+
+h2 {
+    text-decoration: underline; /* Underlines all <h2> elements */
+    text-align: center; /* Ensures the text is centered */
 }
