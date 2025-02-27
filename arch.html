@@ -14,7 +14,6 @@
     />
 
     <!-- Preconnect to Google Fonts -->
-    <
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,13 +48,28 @@
       class="py-5 bg-light d-flex align-items-center justify-content-center bordered-section"
     >
       <div class="container text-center">
-        <h2>About the Architecture Program</h2>
-        <p>
-          Our Architecture program equips students with the skills and knowledge
-          necessary to lead in the world of design and construction. We focus on
-          creativity, innovation, and sustainability.
-        </p>
-        <a href="#curriculum" class="btn btn-primary">Learn More</a>
+        <h5 id="about-arch-header" style="cursor: pointer;">
+          About the Architecture 1
+        </h5>
+        <div id="about-arch-content" class="d-none">
+          <p>
+            Architecture I is a one-year, five-credit course designed for students who may be considering post-secondary education programs or employment in related areas. The course is focused on the principles, concepts, and the use of graphic tools in the fields of architecture, structural systems, and construction. This program will provide an understanding of construction methods and basic drawing fundamentals. The students will prepare working drawings, including floor plan, wall section, and elevation drawings using traditional and computer-assisted design (CAD) methods. The students learn by developing residential plans and constructing models/prototypes. This course will enhance the students’ awareness of various facets of the architectural field, including construction techniques, historical perspectives, landscape design, architectural styles, building codes, and structural design. Students will be able to communicate architectural ideas in an understandable, efficient, and accurate manner.
+          </p>
+        </div>
+
+        <h5 id="course-work-header" style="cursor: pointer;">Course Work</h5>
+        <ul id="course-work-list" class="d-none">
+          <li>Introduction to Architecture</li>
+          <li>CAD Design</li>
+          <li>Structural Systems</li>
+          <li>Construction Techniques</li>
+        </ul>
+
+        <h5 id="student-work-header" style="cursor: pointer;">Student Work</h5>
+        <div id="student-work-list" class="d-none">
+          <img src="images/student1.jpg" alt="Student Project 1" class="img-fluid" />
+          <img src="images/student2.jpg" alt="Student Project 2" class="img-fluid" />
+        </div>
       </div>
     </section>
 
@@ -64,75 +78,10 @@
       id="faculty"
       class="py-5 d-flex align-items-center justify-content-center bordered-section"
     >
-      <div class="container text-center">
-        <h2>Meet Our Faculty</h2>
-        <div class="row justify-content-center">
-          <!-- Add "justify-content-center" to center the content -->
-          <div class="col-md-4">
-            <div class="faculty-member">
-              <img
-                src="path/to/faculty-photo2.jpg"
-                class="img-fluid rounded-circle"
-                alt="Faculty Member 2"
-              />
-              <h3>Professor Jane Smith</h3>
-              <p>Specialist in Design Theory and Architectural History</p>
-            </div>
-          </div>
-        </div>
-        <a href="#faculty" class="btn btn-primary">View Full Faculty</a>
-      </div>
+      <div class="container text-center"></div>
     </section>
 
-    <!-- Image Gallery Section -->
-    <section
-      id="gallery"
-      class="py-5 bg-light d-flex align-items-center justify-content-center bordered-section"
-    >
-      <div class="container text-center">
-        <h2>Our Architecture in Action</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <img
-              src="path/to/gallery-image1.jpg"
-              class="img-fluid"
-              alt="Gallery Image 1"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="path/to/gallery-image2.jpg"
-              class="img-fluid"
-              alt="Gallery Image 2"
-            />
-          </div>
-          <div class="col-md-4">
-            <img
-              src="path/to/gallery-image3.jpg"
-              class="img-fluid"
-              alt="Gallery Image 3"
-            />
-          </div>
-        </div>
-        <a href="#gallery" class="btn btn-primary">See More Projects</a>
-      </div>
-    </section>
-
-    <!-- Contact Section (Full Width) -->
-    <section id="contact" class="py-5">
-      <div class="container text-center">
-        <h2>Get in Touch</h2>
-        <p>
-          If you're interested in learning more about our program, feel free to
-          contact us.
-        </p>
-        <p>
-          Email:
-          <a href="mailto:Lransom@frhsd.com">Lransom@frhsd.com</a>
-        </p>
-      </div>
-    </section>
-    <!-- Link to Bootstrap JS and dependencies -->
+    <!-- Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyvuQ5xjFU0v9HlpeR1MlX4mB6e1Do9hCwrC8g9cl"
@@ -148,5 +97,28 @@
       integrity="sha384-pzjw8f+ua7Kw1TIq0l0Jc5WzF1F7ayJw8g1vlfLh/vpS/Rw3D/ZmFo6vOBI2+W2D"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const courseWorkHeader = document.querySelector("#course-work-header");
+        const courseWorkList = document.querySelector("#course-work-list");
+        const studentWorkHeader = document.querySelector("#student-work-header");
+        const studentWorkList = document.querySelector("#student-work-list");
+        const aboutArchHeader = document.querySelector("#about-arch-header");
+        const aboutArchContent = document.querySelector("#about-arch-content");
+
+        courseWorkHeader.addEventListener("click", function () {
+          courseWorkList.classList.toggle("d-none");
+        });
+
+        studentWorkHeader.addEventListener("click", function () {
+          studentWorkList.classList.toggle("d-none");
+        });
+
+        aboutArchHeader.addEventListener("click", function () {
+          aboutArchContent.classList.toggle("d-none");
+        });
+      });
+    </script>
   </body>
 </html>
