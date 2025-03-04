@@ -139,47 +139,56 @@ h2 {
     margin-top: 20px; /* Adds space between the images and the button */
 }
 
-/* Common styles for the headers to make them look like buttons */
-#about-arch-header,
-#course-work-header,
-#student-work-header {
+/* Common styles for the clickable section headers */
+#about-arch1-header,
+#course-work1-header,
+#student-work1-header,
+#about-arch2-header,
+#course-work2-header,
+#student-work2-header,
+#about-arch3-header,
+#course-work3-header,
+#student-work3-header {
     font-size: 24px;
     font-weight: 600;
     color: #333;
     cursor: pointer;
-    padding: 12px 25px; /* Same padding as the buttons */
-    border: 2px solid transparent; /* No border initially */
-    border-radius: 30px; /* Rounded corners like the buttons */
-    background-color: #fff; /* White background by default */
+    padding: 12px 25px; /* Padding for a button-like look */
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background-color: #fff;
     transition: all 0.3s ease;
-    display: inline-block; /* Make it inline-block to behave like a button */
-    margin: 10px 0; /* Add some space between the headers */
+    display: inline-block;
+    margin: 10px 0;
 }
 
-/* Hover effect for the headers to match the buttons */
-#about-arch-header:hover,
-#course-work-header:hover,
-#student-work-header:hover {
-    color: #fff; /* White text color on hover */
-    background-color: #1e455f; /* Background color matching the button color */
+/* Hover effect for clickable section headers */
+#about-arch1-header:hover,
+#course-work1-header:hover,
+#student-work1-header:hover,
+#about-arch2-header:hover,
+#course-work2-header:hover,
+#student-work2-header:hover,
+#about-arch3-header:hover,
+#course-work3-header:hover,
+#student-work3-header:hover {
+    color: #fff;
+    background-color: #1e455f; /* Matching button color */
     transform: translateY(-3px); /* Lift effect */
-    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3); /* Add shadow */
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3); /* Soft shadow */
     padding: 12px 25px; /* Maintain padding on hover */
-    border-radius: 30px; /* Keep rounded corners */
+    border-radius: 30px;
 }
 
-/* Back to Home Button */
 /* Back to Home Button */
 .back-to-home {
     position: fixed;
     bottom: 20px;
     left: 20px;
     z-index: 1000; /* Ensures it stays above other elements */
-  }
-  
-  
-  .back-to-home:hover {
+}
+
+.back-to-home:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
-  }
-  
+}
