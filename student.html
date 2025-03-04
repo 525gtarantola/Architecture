@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School of Architecture</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section
+      id="hero"
+      class="d-flex justify-content-center align-items-center text-center text-white"
+      style="
+        background-image: url('images/detail-shot-patterned-wall_1359-847.avif');
+        background-size: cover;
+        height: 80vh;
+      "
+    >
+      <div class="hero-content">
+        <h1>Student Work</h1>
+        <p>Marlboro High School Architecture</p>
+      </div>
+    </section>
+
+    <a href="index.html" class="btn btn-primary back-to-home">Back to Home</a>
+
+    <!-- Gallery Title -->
+    <h2 class="text-center mb-4 mt-5">Gallery</h2>
+
+    <section
+      id="gallery"
+      class="container my-5 p-4 bg-white shadow-sm rounded"
+      style="border: 2px solid black"
+    >
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="gallery-container">
+            <img
+              src="images/student1.jpg"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 1"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student1.jpg"
+            />
+            <img
+              src="images/student2.jpg"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 2"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student2.jpg"
+            />
+            <img
+              src="images/student3.jpg"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 3"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student3.jpg"
+            />
+            <img
+              src="images/student4.jpg"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 4"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student4.jpg"
+            />
+            <img
+              src="images/student5.jpg"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 5"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student5.jpg"
+            />
+            <img
+              src="images/student6.JPG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 6"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student6.JPG"
+            />
+            <img
+              src="images/student7.JPG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 7"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student7.JPG"
+            />
+            <img
+              src="images/student8.JPG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 8"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student8.JPG"
+            />
+            <img
+              src="images/student9.PNG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 9"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student9.PNG"
+            />
+            <img
+              src="images/student10.PNG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 10"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student10.PNG"
+            />
+            <img
+              src="images/student11.PNG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 11"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student11.PNG"
+            />
+            <img
+              src="images/student12.JPG"
+              class="img-fluid mb-4 gallery-img"
+              alt="Gallery Image 12"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-bs-image="images/student12.JPG"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal to view image in larger size -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <img id="modal-image" src="" alt="Modal Image" class="img-fluid" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyvuQ5xjFU0v9HlpeR1MlX4mB6e1Do9hCwrC8g9cl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0l0Jc5WzF1F7ayJw8g1vlfLh/vpS/Rw3D/ZmFo6vOBI2+W2D"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0l0Jc5WzF1F7ayJw8g1vlfLh/vpS/Rw3D/ZmFo6vOBI2+W2D"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add event listeners to images to change the modal image
+        const images = document.querySelectorAll(".gallery-img");
+        const modalImage = document.getElementById("modal-image");
+
+        images.forEach(function (image) {
+          image.addEventListener("click", function () {
+            const imageUrl = image.getAttribute("data-bs-image");
+            modalImage.src = imageUrl;
+          });
+        });
+      });
+    </script>
+
+    <style>
+      .gallery-img {
+        max-width: 100%; /* Ensures the images are responsive */
+        max-height: 300px; /* Adjust height limit as needed */
+        object-fit: cover; /* Ensures the image keeps its aspect ratio */
+        cursor: pointer; /* Make the image look clickable */
+      }
+
+      #gallery h2 {
+        text-align: center; /* Ensure title is centered */
+      }
+    </style>
+  </body>
+</html>
