@@ -1,3 +1,4 @@
+/* General body styles */
 body {
     font-family: "Marcellus", serif;
     margin: 0;
@@ -45,15 +46,36 @@ a {
     height: 200px;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 2px solid black; /* Adds a black border around the faculty images */
-    border-radius: 10px; /* Optional: Adds rounded corners to the border */
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
-/* Add black border around the gallery images */
-#gallery .gallery-grid img {
-    margin-bottom: 15px;
-    border: 2px solid black; /* Adds a black border around the gallery images */
-    border-radius: 10px; /* Optional: Adds rounded corners to the border */
+/* Gallery Layout */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between images */
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 15px; /* Padding to keep content inside */
+}
+
+/* Gallery Image Styling */
+.gallery-img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border: 2px solid black; /* Keeps the thin border */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px; /* Added slight rounding for better aesthetics */
+}
+
+/* Hover Effect for Images */
+.gallery-img:hover {
+    opacity: 0.8;
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 #contact {
@@ -87,12 +109,11 @@ a {
     box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.4);
 }
 
-/* Section with borders */
 .bordered-section {
     border: 2px solid black;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1450px;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 1200px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -124,23 +145,20 @@ h2 {
 }
 
 .custom-img {
-    border: 2px solid black; /* Adds black border around the image */
-    width: 100%; /* Makes the images take full width of their container */
-    height: 250px; /* Fixes a consistent height for the images */
-    object-fit: cover; /* Ensures the images maintain aspect ratio without distortion */
+    border: 2px solid black;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-/* Add some space below the images in the gallery */
 #gallery .row {
-    margin-bottom: 30px; /* Adds space below the images */
+    margin-bottom: 30px;
 }
 
-/* Add some space above the button */
 #gallery .btn {
-    margin-top: 20px; /* Adds space between the images and the button */
+    margin-top: 20px;
 }
 
-/* Common styles for the clickable section headers */
 #about-arch1-header,
 #course-work1-header,
 #student-work1-header,
@@ -154,7 +172,7 @@ h2 {
     font-weight: 600;
     color: #333;
     cursor: pointer;
-    padding: 12px 25px; /* Padding for a button-like look */
+    padding: 12px 25px;
     border: 2px solid transparent;
     border-radius: 30px;
     background-color: #fff;
@@ -163,7 +181,6 @@ h2 {
     margin: 10px 0;
 }
 
-/* Hover effect for clickable section headers */
 #about-arch1-header:hover,
 #course-work1-header:hover,
 #student-work1-header:hover,
@@ -173,23 +190,77 @@ h2 {
 #about-arch3-header:hover,
 #course-work3-header:hover,
 #student-work3-header:hover {
-    color: #fff;
-    background-color: #1e455f; /* Matching button color */
-    transform: translateY(-3px); /* Lift effect */
-    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3); /* Soft shadow */
-    padding: 12px 25px; /* Maintain padding on hover */
+    color: white;
+    background-color: hsl(204, 52%, 25%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+    padding: 12px 25px;
     border-radius: 30px;
 }
 
-/* Back to Home Button */
 .back-to-home {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
 }
 
 .back-to-home:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
+    background-color: #1e455f;
+    transform: none;
 }
+
+/* Lightbox container */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Lightbox image */
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Previous & Next buttons */
+  button {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+  
+  #prevBtn {
+    left: 10px;
+  }
+  
+  #nextBtn {
+    right: 10px;
+  }
+  
